@@ -1,0 +1,37 @@
+:root { color-scheme: light dark; --paper: #fff; --ink: #242629; --muted: #62666b; --rule: #d9dce0; --accent: #12675b; }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--paper); color: var(--ink); font: 16px/1.8 -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", sans-serif; letter-spacing: 0; }
+a { color: var(--accent); text-underline-offset: .2em; overflow-wrap: anywhere; }
+a:hover { text-decoration-thickness: 2px; }
+a:focus-visible, summary:focus-visible { outline: 3px solid #c1535b; outline-offset: 4px; }
+header, footer { border-bottom: 1px solid var(--rule); }
+nav { max-width: 960px; padding: 18px 24px; margin: auto; display: flex; gap: 12px 28px; flex-wrap: wrap; align-items: center; }
+nav a:first-child { font-weight: 600; color: var(--ink); text-decoration: none; }
+main { max-width: 880px; margin: auto; padding: 48px 24px 72px; }
+h1 { font-size: 32px; line-height: 1.35; margin: 0 0 16px; overflow-wrap: anywhere; font-weight: 650; }
+h2 { font-size: 22px; line-height: 1.5; margin: 32px 0 12px; }
+p { margin: 12px 0; }
+.lede, .muted { color: var(--muted); }
+.language { display: flex; gap: 20px; margin: 22px 0; flex-wrap: wrap; }
+.app-list { margin-top: 32px; border-top: 1px solid var(--rule); }
+.app-row { padding: 28px 0; border-bottom: 1px solid var(--rule); display: grid; grid-template-columns: 72px minmax(0, 1fr); gap: 24px; align-items: start; }
+.app-row h2 { font-size: 24px; margin: 0; }
+.app-row p { margin: 8px 0; }
+.app-row img { width: 72px; height: 72px; border-radius: 8px; }
+.word-card { margin: 28px 0; display: block; width: min(100%, 540px); height: auto; }
+details { border-top: 1px solid var(--rule); padding: 18px 0; }
+details:last-of-type { border-bottom: 1px solid var(--rule); }
+summary { cursor: pointer; font-weight: 600; padding-right: 12px; }
+details p { margin-left: 20px; }
+footer { border-top: 1px solid var(--rule); border-bottom: 0; }
+footer p { max-width: 880px; margin: auto; padding: 24px; color: var(--muted); font-size: 14px; }
+@media (max-width: 480px) {
+  main { padding-top: 32px; }
+  h1 { font-size: 28px; }
+  .app-row { grid-template-columns: 56px minmax(0, 1fr); gap: 16px; }
+  .app-row img { width: 56px; height: 56px; }
+  .app-row h2 { font-size: 22px; }
+}
+@media (prefers-color-scheme: dark) {
+  :root { --paper: #17191b; --ink: #f1f3f4; --muted: #b4b9be; --rule: #3a3e42; --accent: #8ed4c0; }
+}
